@@ -1,0 +1,10 @@
+<div class="contents row">
+  <% @cheats.each do |cheat| %>
+    <div class="content_post" style="background-image: url(<%= cheat.image %>);">
+      <p><%= cheat.explanation %></p>
+      <span class="name">
+        <%= cheat.name %>
+      </span>
+    </div>
+  <% end %>
+</div>
