@@ -1,24 +1,68 @@
-# README
+# アプリケーション名　
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Every day Cheat day2
 
-Things you may want to cover:
+# アプリケーション概要
 
-* Ruby version
+デカ盛り、ビュッフェのみを探せる、そのジャンルを好きな人同士が写真や情報を投稿、共有できるアプリ
 
-* System dependencies
+# URL
 
-* Configuration
+デプロイ後記載
 
-* Database creation
+# テスト用アカウント
 
-* Database initialization
+・ Basic認証パスワード: 0216
 
-* How to run the test suite
+・ Basic認証ID: takayuki
 
-* Services (job queues, cache servers, search engines, etc.)
+・ メールアドレス: test@com
 
-* Deployment instructions
+・ パスワード: t111111
 
-* ...
+# 利用方法
+
+## 情報投稿
+
+1.トップページ（一覧ページ）のヘッダーから新規登録を行う
+
+2.情報投稿ボタンから、情報の内容（タイトル、画像、店の名前、住所、量などの各カテゴリー）を入力し投稿
+
+## プロフィール機能
+1.自身の詳細（どれくらいの量を食べれるかなど）を登録できる
+
+2.これによりこのメニュー（投稿された情報）は投稿者にとって、量が多いのか少ないのかで他の人が判断できる
+
+# アプリケーションを作成した背景
+食べることが好きな友人とよくデカ盛り店などに行くが、検索すると普通の飲食店も出てきたり、量が凄いなどのコメントを見て行ったら自分達にはそうでもなかったりしたので、それ（デカ盛り）専用の情報共有アプリがあれば検索も楽なのではと考えた。
+さらに投稿者がどのくらいの量を食べれる人なのかわかれば判断基準にもなって便利ではないかと思い開発することにした。
+
+# 洗い出した要件
+
+[要件を定義したシート](https://docs.google.com/spreadsheets/d/1rzNZn0oVUPt1KzfWtXyVZMwxy8GU1aPIqWGFCv6tAzI/edit#gid=982722306)
+
+# 実装した機能についての画像やGIFおよびその説明
+後ほど記載
+
+# 実装予定の機能
+ログイン機能、一覧表示機能、編集機能、削除機能
+
+# データベース設計
+
+[![Image from Gyazo](https://i.gyazo.com/e4059ff76a9a6422b3d44f3ffab52d42.png)](https://gyazo.com/e4059ff76a9a6422b3d44f3ffab52d42)
+
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/8b88dc8e86de54cf205d00f3e3ce1175.png)](https://gyazo.com/8b88dc8e86de54cf205d00f3e3ce1175)
+
+# 開発環境
+・フロントエンド
+
+・バックエンド
+
+・インフラ
+
+・テスト
+
+・テキストエディタ
+
+・タスク管理
