@@ -12,6 +12,11 @@ class CheatsController < ApplicationController
     Cheat.create(cheat_params)
   end
 
+  def destroy
+    cheat = Cheat.find(params[:id])
+    cheat.destroy
+  end
+
   private
   
   def cheat_params

@@ -1,6 +1,14 @@
 <div class="contents row">
   <% @cheats.each do |cheat| %>
     <div class="content_post" style="background-image: url(<%= cheat.image %>);">
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '削除', cheat_path(cheat.id), method: :delete %>
+          </li>
+        </ul>
+      </div>
       <p><%= cheat.explanation %></p>
       <span class="name">
         <%= cheat.name %>
