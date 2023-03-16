@@ -17,6 +17,15 @@ class CheatsController < ApplicationController
     cheat.destroy
   end
 
+  def edit
+    @cheat = Cheat.find(params[:id])
+  end
+
+  def update
+    cheat = Cheat.find(params[:id])
+    cheat.update(cheat_params)
+  end
+  
   private
   
   def cheat_params
