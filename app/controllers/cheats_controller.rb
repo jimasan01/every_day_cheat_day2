@@ -1,4 +1,6 @@
 class CheatsController < ApplicationController
+  before_action :set_cheat, only: [:edit, :show]
+
 
   def index
     @cheats = Cheat.all
@@ -18,18 +20,24 @@ class CheatsController < ApplicationController
   end
 
   def edit
-    @cheat = Cheat.find(params[:id])
   end
 
   def update
     cheat = Cheat.find(params[:id])
     cheat.update(cheat_params)
   end
+
+  def show
+  end
   
   private
   
   def cheat_params
     params.require(:cheat).permit(:name, :image, :explanation)
+  end
+
+  def set_cheat
+    @cheat = Cheat.find(params[:id])
   end
 
 end
