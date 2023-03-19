@@ -1,6 +1,6 @@
 class CheatsController < ApplicationController
   before_action :set_cheat, only: [:edit, :show]
-
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @cheats = Cheat.all
@@ -38,6 +38,12 @@ class CheatsController < ApplicationController
 
   def set_cheat
     @cheat = Cheat.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 end
