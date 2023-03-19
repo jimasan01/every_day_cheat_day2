@@ -3,7 +3,7 @@ class CheatsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @cheats = Cheat.all
+    @cheats = Cheat.includes(:user)
   end
   
   def new
@@ -33,7 +33,7 @@ class CheatsController < ApplicationController
   private
   
   def cheat_params
-    params.require(:cheat).permit(:name, :image, :explanation)
+    params.require(:cheat).permit(:name, :image, :explanation).merge(user_id: current_user.id)
   end
 
   def set_cheat
