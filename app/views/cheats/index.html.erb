@@ -5,7 +5,7 @@
 <div class="contents row">
   <% @cheats.each do |cheat| %>
     <div class="content_post">
-    <%= image_tag cheat.image.variant(resize: '500x500') %>
+    <%= image_tag cheat.image.variant(resize: '500x500'), class: 'cheat-image' if cheat.image.attached? %>
       <div class="more">
         <span><%= image_tag 'arrow_top.png' %></span>
         <ul class="more_list">
