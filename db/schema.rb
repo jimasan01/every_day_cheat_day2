@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(version: 2023_03_20_125832) do
   create_table "cheats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "explanation"
+    t.integer "category_id", null: false
+    t.integer "area_id", null: false
+    t.integer "volume_id", null: false
+    t.integer "price_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

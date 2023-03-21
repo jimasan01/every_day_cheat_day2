@@ -1,9 +1,14 @@
 <div class="contents row">
   <p><%= @nickname %>さんの投稿一覧</p>
   <% @cheats.each do |cheat| %>
-    <div class="content_post" style="background-image: url(<%= cheat.image %>);">
+    <div class="content_post">
+      <%= image_tag cheat.image.variant(resize: '500x500') %>
       <p><%= cheat.name %></p>
     </div>
     <%= cheat.explanation %>
+    <%= cheat.category.name %>
+    <%= cheat.area.name %>
+    <%= cheat.volume.name %>
+    <%= cheat.price.name %>
   <% end %>
 </div>

@@ -13,6 +13,15 @@
       </ul>
     </div>
     <p><%= @cheat.name %></p>
+    <span class="name">
+        <a href="/users/<%= @cheat.user.id %>">
+          <span>投稿者</span><%= @cheat.user.nickname %>
+        </a>
+    </span>
   </div>
   <%= @cheat.explanation %>
+  <%= @cheat.category.name %>
+  <%= @cheat.area.name %>
+  <%= @cheat.volume.name %>
+  <%= @cheat.price.name %>
 </div>
