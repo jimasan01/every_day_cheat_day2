@@ -33,7 +33,7 @@ class CheatsController < ApplicationController
   private
   
   def cheat_params
-    params.require(:cheat).permit(:name, :image, :explanation).merge(user_id: current_user.id)
+    params.require(:cheat).permit(:name, :image, :explanation, :category_id, :area_id, :volume_id, :price_id).merge(user_id: current_user.id)
   end
 
   def set_cheat

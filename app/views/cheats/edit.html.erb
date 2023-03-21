@@ -5,6 +5,14 @@
       <%= form.text_field :name, placeholder: "名前" %>
       <%= form.file_field :image %>
       <%= form.text_area :explanation, placeholder: "説明や感想など", rows: "10" %>
+      ジャンル
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"genre-select"}) %>
+      都道府県
+      <%= form.collection_select(:area_id, Area.all, :id, :name, {}, {class:"genre-select"}) %>
+      ボリューム
+      <%= form.collection_select(:volume_id, Volume.all, :id, :name, {}, {class:"genre-select"}) %>
+      価格
+      <%= form.collection_select(:price_id, Price.all, :id, :name, {}, {class:"genre-select"}) %>
       <%= form.submit "投稿" %>
     <% end %>
   </div>
