@@ -2,9 +2,9 @@
   <div class="container">
     <h3>編集する</h3>
     <%= form_with(model: @cheat, local: true) do |form| %>
-      <%= form.text_field :name, placeholder: "name" %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :explanation, placeholder: "text", rows: "10" %>
+      <%= form.text_field :name, placeholder: "名前" %>
+      <%= form.file_field :image %>
+      <%= form.text_area :explanation, placeholder: "説明や感想など", rows: "10" %>
       <%= form.submit "投稿" %>
     <% end %>
   </div>

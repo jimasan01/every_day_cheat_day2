@@ -1,6 +1,11 @@
+<div class="top">
+    <p>デカ盛り好きの、デカ盛り好きによる、デカ盛り好きのための情報共有アプリ</p>
+    <p>みんなのオススメ投稿しよう！！</p>
+</div>
 <div class="contents row">
   <% @cheats.each do |cheat| %>
-    <div class="content_post" style="background-image: url(<%= cheat.image %>);">
+    <div class="content_post">
+    <%= image_tag cheat.image.variant(resize: '500x500') %>
       <div class="more">
         <span><%= image_tag 'arrow_top.png' %></span>
         <ul class="more_list">

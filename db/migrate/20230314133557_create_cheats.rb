@@ -3,7 +3,7 @@ class CreateCheats < ActiveRecord::Migration[6.0]
     create_table :cheats do |t|
       t.string :name
       t.string :explanation
-      t.text   :image
+      t.references :user,           null: false, foreign_key: true
       t.timestamps
     end
   end
